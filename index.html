@@ -16,18 +16,40 @@
                 </a>
             </div>
 
-            <nav class="nav-menu">
+            <div class="burger-menu" id="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="nav-menu" id="nav-menu">
                 <a href="#">Modelle</a>
                 <a href="#">Konfigurator</a>
                 <a href="#">Abenteuer</a>
                 <a href="#">Beratung</a>
+                <a href="#" class="btn-primary mobile-only">Probefahrt</a>
             </nav>
 
-            <div class="header-call">
+            <div class="header-call desktop-only">
                 <a href="#" class="btn-primary">Probefahrt</a>
             </div>
         </div>
     </header>
 
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="./video/def.mp4" type="video/mp4">
+        </video>
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <h1>Defender</h1>
+            <p>Geboren für jedes Terrain</p>
+            <a href="#" class="btn-hero">Entdecken</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
