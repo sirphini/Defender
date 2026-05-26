@@ -385,6 +385,7 @@ body {
     }
 }
 
+
 .main-footer {
     padding: 80px 0 40px 0;
     background: var(--header-bg);
@@ -475,5 +476,93 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+.booking-section {
+    padding: 100px 0;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+}
+
+.booking-form {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--primary);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    max-height: 300px; 
+    min-height: 100px; 
+    resize: vertical; 
+}
+
+.form-group select option {
+    background: var(--header-bg);
+    color: var(--primary);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+}
+
+.full-width {
+    grid-column: span 2;
+}
+
+.form-submit {
+    grid-column: span 2;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-submit .btn-primary {
+    cursor: pointer;
+    min-width: 250px;
+}
+
+@media (max-width: 768px) {
+    .booking-form {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 1rem;
+        padding: 14px;
+    }
+
+    .full-width, .form-submit {
+        grid-column: span 1;
+    }
+
+    .form-submit .btn-primary {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .form-group textarea {
+        max-height: 200px;
+        min-height: 120px;
     }
 }
