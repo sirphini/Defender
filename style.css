@@ -668,10 +668,6 @@ body {
     background: rgba(0,0,0,0.01);
 }
 
-.specs-table tr:hover {
-    background: rgba(0,0,0,0.03);
-}
-
 @media (max-width: 768px) {
     .specs-table th, .specs-table td {
         padding: 15px 10px;
