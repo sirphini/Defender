@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="img/Defender.svg" type="image/svg+xml">
+    <link rel="icon" href="img/defender.svg" type="image/svg+xml">
     <title>Land Rover Defender</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- header / navigation -->
     <header class="main-header">
         <div class="container">
             <div class="logo">
@@ -23,10 +24,10 @@
 
             <nav class="nav-menu" id="nav-menu">
                 <a href="#version">Modelle</a>
-                <a href="#specs">Vergleich</a>
+                <a href="#configurator">Konfigurator</a>
                 <a href="#images">Gallery</a>
                 <a href="#news">News</a>
-                <a href="#" class="btn-primary mobile-only">Probefahrt</a>
+                <a href="#testdrive" class="btn-primary mobile-only">Probefahrt</a>
             </nav>
 
             <div class="header-call desktop-only">
@@ -34,7 +35,10 @@
             </div>
         </div>
     </header>
-  
+
+    <main>
+
+        <!-- hero section -->
     <section class="hero">
         <video class="hero-video" autoplay muted loop playsinline>
             <source src="./video/def.mp4" type="video/mp4">
@@ -43,49 +47,54 @@
         <div class="hero-content">
             <h1>Defender</h1>
             <p>Geboren für jedes Terrain</p>
-            <a href="#" class="btn-hero">Entdecken</a>
+            <a href="#version" class="btn-hero">Entdecken</a>
         </div>
     </section>
 
+    <!-- model section -->
     <section class="models-section" id="version">
         <div class="container-models">
             <div class="section-header">
-                <h2 class="section_titel">Wählen Sie Ihren Defender</h2>
+                <h2 class="section_title">Wählen Sie Ihren Defender</h2>
             </div>
             
             <div class="models-grid">
+
+                 <!-- Model 90 -->  
                 <div class="model-card">
                     <div class="model-image"><img src="img/90.jpg" alt="Defender 90"></div>
                     <div class="model-info">
                         <h3>DEFENDER 90</h3>
                         <p>Kompakt und unaufhaltsam.</p>
                         <div class="model-links">
-                            <a href="#" class="text-link">Entdecken</a>
-                            <a href="#" class="text-link">Vergleich</a>
+                            <a href="#specs" class="text-link">Entdecken</a>
+                            <a href="#configurator" class="text-link">Konfigurieren</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Model 110 -->
                 <div class="model-card">
                     <div class="model-image"><img src="img/110.jpg" alt="Defender 110"></div>
                     <div class="model-info">
                         <h3>DEFENDER 110</h3>
                         <p>Die Ikone in Bestform.</p>
                         <div class="model-links">
-                            <a href="#" class="text-link">Entdecken</a>
-                            <a href="#" class="text-link">Konfigurieren</a>
+                            <a href="#specs" class="text-link">Entdecken</a>
+                            <a href="#configurator" class="text-link">Konfigurieren</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Model 130 -->
                 <div class="model-card">
                     <div class="model-image"><img src="img/130.jpg" alt="Defender 130"></div>
                     <div class="model-info">
                         <h3>DEFENDER 130</h3>
                         <p>Platz für jedes Abenteuer.</p>
                         <div class="model-links">
-                            <a href="#" class="text-link">Entdecken</a>
-                            <a href="#" class="text-link">Konfigurieren</a>
+                            <a href="#specs" class="text-link">Entdecken</a>
+                            <a href="#configurator" class="text-link">Konfigurieren</a>
                         </div>
                     </div>
                 </div>
@@ -94,11 +103,11 @@
     </section>
 
 
-    
+    <!-- specifications comparison table -->
  <section class="spec-section" id="specs">
     <div class="container-models">
         <div class="section-header">
-            <h2 class="section_titel">Technische Daten</h2>
+            <h2 class="section_title">Modell Vergleich</h2>
         </div>
         
         <div class="specs-table-container">
@@ -117,18 +126,6 @@
                         <td>4.583 mm</td>
                         <td>5.018 mm</td>
                         <td>5.358 mm</td>
-                    </tr>
-                    <tr>
-                        <td>Breite (inkl. Spiegel)</td>
-                        <td>2.008 mm</td>
-                        <td>2.008 mm</td>
-                        <td>2.008 mm</td>
-                    </tr>
-                    <tr>
-                        <td>Höhe</td>
-                        <td>1.974 mm</td>
-                        <td>1.974 mm</td>
-                        <td>1.970 mm</td>
                     </tr>
                     <tr>
                         <td>Bodenfreiheit</td>
@@ -178,11 +175,77 @@
     </div>
 </section>
 
-    
+<!-- configurator -->
+  <section class="configurator-section" id="configurator">
+    <div class="container-models">
+        <div class="section-header">
+            <h2 class="section_title">Konfigurator</h2>
+        </div>
+
+        <div class="config-wrapper">
+                <!-- car preview -->
+            <div class="config-visual">
+                <div class="car-stage">
+                    <div class="car-image-container">
+                        <img id="car-image" src="img/90_white.jpg" alt="Defender">
+                    </div>
+                    <div class="stage-shadow"></div>
+                </div>
+                <div class="config-price-tag">
+                    <span class="label">EST. Preis</span>
+                    <h2 id="total-price">70'000 CHF</h2>
+                </div>
+            </div>
+            
+           <!-- configuration controls -->
+            <div class="config-controls">
+                <div class="control-group">
+                    <label class="group-label">Modell</label>
+                    <div class="custom-select-wrapper">
+                        <select id="model-select" class="minimal-select">
+                            <option value="91300" data-name="90">Defender 90</option>
+                            <option value="91500" data-name="110">Defender 110</option>
+                            <option value="106700" data-name="130">Defender 130</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="control-group">
+    <label class="group-label">Aussenfarbe</label>
+
+    <div class="color-selection">
+        <div class="swatch fuji-white active" data-price="0" title="Fuji White"></div>
+        <div class="swatch santorini-black" data-price="1200" title="Santorini Black"></div>
+        <div class="swatch pangea-green" data-price="1500" title="Pangea Green"></div>
+    </div>
+
+    <p id="active-color-name" class="color-name-display">Fuji white</p>
+</div>
+
+                <div class="control-group">
+                    <label class="group-label">Zubehör</label>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="adventure-pack" value="3800">
+                        <label for="adventure-pack" class="custom-checkbox-label">
+                            Adventure Pack <span class="price-suffix">+ 3'800 CHF</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="config-actions">
+                    <a href="#specs" class="btn-primary full-width">Weiter Konfigurieren</a>
+                    <a href="#testdrive" class="btn-primary full-width">Probefahrt</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- news -->
        <section class="news-section" id="news">
     <div class="container-models">
         <div class="section-header">
-            <h2 class="section_titel">News & Storys</h2>
+            <h2 class="section_title">News & Storys</h2>
         </div>
         
         <div class="news-grid">
@@ -205,7 +268,7 @@
     <div class="news-content">
         <span class="news-date">10. MAI 2026</span>
         <h3>Die Geschichte des Land Rover Defender</h3>
-        <p>Vom ersten Series I bis zum modernen Defender: Ein Rückblick auf die Entwicklung eines der bekanntesten Offroad-Fahrzeuge.</p>
+        <p>Vom ersten Series I bis zum modernen Defender: Ein Rückblick auf die Entwicklung eines der bekanntesten Offroad Fahrzeuge.</p>
         <a href="#" class="text-link">Mehr erfahren</a>
     </div>
 </article>
@@ -216,7 +279,7 @@
     </div>
     <div class="news-content">
         <span class="news-date">01. MAI 2026</span>
-        <h3>RESTAURIERUNG EINES DEFENDERS</h3>
+        <h3>Restaurierter eines Defenders</h3>
         <p>Ein ehemaliger Land Rover Defender des Britischen Roten Kreuzes wird sorgfältig restauriert und wieder fahrbereit gemacht.</p>
         <a href="#" class="text-link">Mehr erfahren</a>
     </div>
@@ -225,10 +288,11 @@
     </div>
 </section>
 
-    <section class="gallery-section">
-        <div class="container-models" id="images">
+   <!-- gallery -->
+    <section class="gallery-section" id="images">
+        <div class="container-models">
             <div class="section-header">
-                <h2 class="section_titel">Image Gallery</h2>
+                <h2 class="section_title">Image Gallery</h2>
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item large">
@@ -248,12 +312,13 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> 
 
+   <!-- test drive form -->
     <section class="booking-section" id="testdrive">
     <div class="container-models">
          <div class="section-header">
-            <h2 class="section_titel">Probefahrt anfragen</h2>
+            <h2 class="section_title">Probefahrt anfragen</h2>
         </div>
         
     <form class="booking-form">
@@ -261,7 +326,7 @@
         <input type="text" placeholder="Vorname" required>
     </div>
   <div class="form-group">
-        <input type="text" placeholder=" Nachname" required>
+        <input type="text" placeholder="Nachname" required>
     </div>
     <div class="form-group">
         <input type="email" placeholder="E-Mail Adresse" required>
@@ -290,10 +355,11 @@
     </div>
 </form>
     </div>
-    
 </section>
+</main>
 
-<footer class="main-footer" id="Impressum">
+<!-- footer -->
+<footer class="main-footer" id="impressum">
     <div class="container-models">
         <div class="footer-grid">
             <div class="footer-brand">
@@ -312,7 +378,7 @@
                 <h4>Entdecken</h4>
                 <a href="#images">Gallery</a>
                 <a href="#testdrive">Probefahrt</a>
-                <a href="#specs">Vergleich</a>
+                <a href="#configurator">Konfigurator</a>
             </div>
 
             <div class="footer-links">
@@ -331,6 +397,5 @@
     </div>
 </footer>
     <script src="script.js"></script>
-    
 </body>
 </html>
